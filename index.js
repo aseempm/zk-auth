@@ -41,7 +41,7 @@ async function runDemo() {
 
 // Run the demo when executed directly
 if (require.main === module) {
-  runDemo().catch(console.error);
+  runDemo().then(()=>process.exit(0)).catch(console.error);
 }
 
 module.exports = { runDemo };
